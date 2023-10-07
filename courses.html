@@ -1,0 +1,244 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Courses - MK Online Trading Institute</title>
+    <link rel="icon" href="myprojectlogo.jpeg">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="./style.css">
+    <style>
+        body {
+            background-color: #f5f5f5;
+            font-family: 'Poppins', sans-serif;
+            margin: 0;
+        }
+
+        .navbar {
+            background-color: #3498db;
+            color: white;
+            padding: 1rem;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .navbar h2 {
+            font-size: 1.5rem;
+        }
+
+        .navbar ul {
+            list-style: none;
+            display: flex;
+            gap: 20px;
+        }
+
+        .navbar ul li {
+            font-size: 1rem;
+        }
+
+        .navbar ul li a {
+            text-decoration: none;
+            color: white;
+        }
+
+        .courses-container {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 20px;
+            padding: 20px;
+            background-color: #ecf0f1;
+        }
+
+        .course-card {
+            background-color: #3498db;
+            color: white;
+            padding: 20px;
+            border-radius: 10px;
+            width: 300px;
+            text-align: center;
+            box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.2);
+        }
+
+        .course-card:nth-child(2) {
+            background-color: #e74c3c;
+        }
+
+        .course-card:nth-child(3) {
+            background-color: #f39c12;
+        }
+
+        .course-card:nth-child(4) {
+            background-color: #9b59b6;
+        }
+
+        .course-card:nth-child(5) {
+            background-color: #2ecc71;
+            height: 400px;
+        }
+
+        .course-card:nth-child(6) {
+            background-color: #e67e22;
+        }
+
+        .course-card:nth-child(7) {
+            background-color: #16a085;
+        }
+
+        .course-card:nth-child(8) {
+            background-color: #d35400;
+        }
+
+        .course-card:nth-child(9) {
+            background-color: #27ae60;
+        }
+
+        .course-card:nth-child(10) {
+            background-color: #8e44ad;
+        }
+
+        .course-card h2 {
+            font-size: 1.5rem;
+            margin-bottom: 10px;
+        }
+
+        .course-card p {
+            font-size: 1rem;
+        }
+
+        .show-more-button {
+            background-color: #3498db;
+            color: white;
+            border: none;
+            padding: 10px 20px;
+            border-radius: 5px;
+            cursor: pointer;
+            margin: 20px auto;
+        }
+
+        #hidden-courses {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 20px;
+            max-height: 0;
+            overflow: hidden;
+            transition: max-height 0.5s ease-in-out;
+            padding: 20px;
+            background-color: #ecf0f1;
+        }
+
+        .hidden-course-card {
+            background-color: #c0392b;
+            color: white;
+            padding: 20px;
+            border-radius: 10px;
+            width: 300px;
+            text-align: center;
+            box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.2);
+        }
+
+        .join-link {
+            text-align: center;
+            margin-top: 20px;
+        }
+
+        .join-link a {
+            text-decoration: none;
+            background-color: #3498db;
+            color: white;
+            padding: 10px 20px;
+            border-radius: 5px;
+        }
+    </style>
+</head>
+
+<body>
+    <nav class="navbar">
+        <h2>MK Online Trading Institute</h2>
+        <ul>
+            <li><a href="about.html">About</a></li>
+            <li><a href="courses.html">Courses</a></li>
+            <li><a href="contact.html">Contact</a></li>
+        </ul>
+    </nav>
+
+    <div class="courses-container">
+        <div class="course-card">
+            <h2>Course 1: Introduction to Online Trading</h2>
+            <p>Learn the basics of online trading.</p>
+        </div>
+
+        <div class="course-card">
+            <h2>Course 2: Technical Analysis Fundamentals</h2>
+            <p>Explore the fundamentals of technical analysis.</p>
+        </div>
+
+        <div class="course-card">
+            <h2>Course 3: Risk Management Strategies</h2>
+            <p>Master risk management techniques for successful trading.</p>
+        </div>
+
+        <div class="course-card">
+            <h2>Course 4: Trading Psychology</h2>
+            <p>Understand the psychology behind successful trading.</p>
+        </div>
+
+        <div class="course-card">
+            <h2>Course 5: Options Trading Strategies</h2>
+            <p>Learn advanced options trading strategies.</p>
+        </div>
+    </div>
+
+    <button class="show-more-button" onclick="showMoreCourses()">Show More</button>
+
+    <div class="courses-container" id="hidden-courses">
+        <div class="hidden-course-card">
+            <h2>Course 6: Forex Trading Basics</h2>
+            <p>Get started with the basics of forex trading.</p>
+        </div>
+
+        <div class="hidden-course-card">
+            <h2>Course 7: Cryptocurrency Trading</h2>
+            <p>Explore the world of cryptocurrency trading.</p>
+        </div>
+
+        <div class="hidden-course-card">
+            <h2>Course 8: Algorithmic Trading</h2>
+            <p>Learn about algorithmic trading strategies.</p>
+        </div>
+
+        <div class="hidden-course-card">
+            <h2>Course 9: Trading Tools and Platforms</h2>
+            <p>Discover essential trading tools and platforms.</p>
+        </div>
+
+        <div class="hidden-course-card">
+            <h2>Course 10: Swing Trading Techniques</h2>
+            <p>Master the art of swing trading in the stock market.</p>
+        </div>
+    </div>
+
+    <div class="join-link">
+        <a href="join.html">Join to enroll in courses</a>
+    </div>
+
+    <script>
+        function showMoreCourses() {
+            const hiddenCourses = document.getElementById("hidden-courses");
+            const showMoreButton = document.querySelector(".show-more-button");
+
+            if (hiddenCourses.style.maxHeight === "0px" || !hiddenCourses.style.maxHeight) {
+                hiddenCourses.style.maxHeight = "100%";
+                showMoreButton.textContent = "Show Less";
+            } else {
+                hiddenCourses.style.maxHeight = "0px";
+                showMoreButton.textContent = "Show More";
+            }
+        }
+    </script>
+</body>
+
+</html>
